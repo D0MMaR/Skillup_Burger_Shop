@@ -31,6 +31,7 @@ const Login = () => {
       </MDBTabs>
 
       <MDBTabsContent>
+             {/* Login Tab */}
           <MDBTabsPane show={justifyActive === "tab1"}>
           <div className="text-center mb-3">
             <p>Sign in with:</p>
@@ -62,10 +63,46 @@ const Login = () => {
           </p>
         </MDBTabsPane>
 
-        
+        {/* Signup Tab */}
         <MDBTabsPane show={justifyActive === "tab2"}>
           
-          <p>This is the Signup tab content.</p>
+        <div className="text-center mb-3">
+            <p>Sign up with:</p>
+            {/* Social media signup buttons */}
+            <div className="d-flex justify-content-between mx-auto" style={{ width: "40%" }}>
+              <MDBBtn tag="a" color="none" className="m-1" style={{ color: "#1266f1" }}>
+                <MDBIcon fab icon="facebook-f" size="sm" />
+              </MDBBtn>
+              <MDBBtn tag="a" color="none" className="m-1" style={{ color: "#1266f1" }}>
+                <MDBIcon fab icon="twitter" size="sm" />
+              </MDBBtn>
+              <MDBBtn tag="a" color="none" className="m-1" style={{ color: "#1266f1" }}>
+                <MDBIcon fab icon="google" size="sm" />
+              </MDBBtn>
+              <MDBBtn tag="a" color="none" className="m-1" style={{ color: "#1266f1" }}>
+                <MDBIcon fab icon="github" size="sm" />
+              </MDBBtn>
+            </div>
+            <p className="text-center mt-3">or:</p>
+          </div>
+
+          {/* Signup form fields */}
+          <MDBInput wrapperClass="mb-4" label="Full Name" id="signupFormName" type="text" />
+          <MDBInput wrapperClass="mb-4" label="Email address" id="signupFormEmail" type="email" />
+          <MDBInput wrapperClass="mb-4" label="Password" id="signupFormPassword" type="password" />
+
+          {/* Checkbox and link */}
+          <div className="d-flex justify-content-between mx-4 mb-4">
+            <MDBCheckbox name="flexCheck" value="" id="flexCheckDefault" label="I agree to the terms and conditions" />
+          </div>
+
+          {/* Signup button */}
+          <MDBBtn className="mb-4 w-100">Sign up</MDBBtn>
+
+          {/* Login link */}
+          <p className="text-center">
+            Already a member? <a href="#!">Login</a>
+          </p>
         </MDBTabsPane>
       </MDBTabsContent>
     </MDBContainer>
@@ -73,3 +110,4 @@ const Login = () => {
 };
 
 export default Login;
+     
